@@ -10,7 +10,7 @@
 
 # Better approach - reading line
 
-$count = 0
+$deeperCount = 0
 $previousValue
 $currentValue
 
@@ -23,7 +23,7 @@ def updateAndCheckValues(value)
         puts "#{value} (n/a) - no previous measurement"
     elsif $currentValue > $previousValue
         # Not first instance
-        $count += 1
+        $deeperCount += 1
         puts " #{value} (increased)"
     else 
         puts " #{value} (decreased)"
@@ -34,4 +34,4 @@ def updateAndCheckValues(value)
 end
 
 File.foreach("data.txt") { | line | updateAndCheckValues(line)}
-puts "Final Count: #{$count}"
+puts "Final Count: #{$deeperCount}"
