@@ -16,7 +16,6 @@ def moveSub(instruction)
     direction = arr[0]
     value = arr[1].to_i
 
-    puts value
     case direction
     when "forward"
         $horizontalPos += value
